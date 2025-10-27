@@ -1,16 +1,48 @@
-# React + Vite
+# 🍔 Food Delivery Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack **Food Delivery Platform** built using **ReactJS** for the frontend and **Spring Boot** for the backend.  
+This project allows users to browse food items, place orders, and manage their cart, while admins can handle menu items and customer orders seamlessly.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Overview
 
-## React Compiler
+This web app simplifies online food ordering with an intuitive interface, real-time interactions, and a secure authentication system using **JWT tokens**.  
+The project was developed as part of a collaborative effort, where I primarily focused on the **frontend (ReactJS)** and **backend authentication modules**, including **login, registration, and email verification via OTP**.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 👤 User Features
+- Register and login securely with **JWT Authentication**
+- Verify email through **OTP verification**
+- Browse and search food items
+- Add items to the cart
+- Place and view orders
+- Mobile-friendly responsive design
+
+### 🧑‍💼 Admin Features
+- Add, edit, and delete food items
+- Manage user requests
+- Approve or deny admin access requests
+- Track and manage orders
+
+---
+
+## 🧩 Tech Stack
+
+### Frontend
+- **ReactJS**
+- **Tailwind CSS**
+- **Axios**
+- **React Router DOM**
+
+### Backend
+- **Spring Boot**
+- **Spring Security + JWT**
+- **Spring Data JPA + Hibernate**
+- **MySQL Database**
+- **Lombok**
+
+---
