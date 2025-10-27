@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import useAuth from "../context/UseAuth";
 import { Link } from "react-router-dom";
+import api from "../api/axios";
 
 const ItemsPage = () => {
   const [items, setItems] = useState([]);
@@ -39,17 +40,22 @@ const ItemsPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {items.map((it) => (
           <div key={it.id} className="bg-white p-4 rounded shadow">
-            <h3 className="font-semibold">{it.name}</h3>
+            <div className="mt-2 flex justify-between items-center">
+              <h3 className="font-semibold">{it.name}</h3>
+              <div
+                className={`px-2 py-1 text-sm rounded ${
+                  it.stock ? "bg-green-100" : "bg-red-100"
+                }`}
+              >
+                {it.stock ? "Available" : "Unavailable"}
+              </div>
+            </div>
             <p>{it.description}</p>
             <div className="mt-2 flex justify-between items-center">
               <div className="text-lg">₹{it.price}</div>
-              <div
-                className={`px-2 py-1 text-sm rounded ${
-                  it.available ? "bg-green-100" : "bg-red-100"
-                }`}
-              >
-                {it.available ? "Available" : "Unavailable"}
-              </div>
+              <button className="px-2 py-1 text-sm rounded bg-green-100 cursor-pointer">
+                Order
+              </button>
             </div>
           </div>
         ))}

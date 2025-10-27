@@ -1,3 +1,4 @@
+import { useState } from "react";
 import useAuth from "../context/UseAuth";
 import { useNavigate } from "react-router-dom";
 
@@ -13,8 +14,10 @@ const LoginPage = () => {
     const res = await login({ email, password });
     if (!res.ok) return setError(res.error);
     // redirect based on role
-    const token = localStorage.getItem("accessToken");
+    const token = localStorage.getItem("token");
+    console.log("Token after login:", token);
     const route = res.role === "SHOP" ? "/shop" : "/customer";
+    navigate(route);
     // if role not included in response, decode token
   };
   return (

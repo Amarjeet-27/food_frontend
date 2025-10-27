@@ -6,6 +6,7 @@ import { jwtDecode } from "jwt-decode";
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
+
   const login = async (credentials) => {
     setLoading(true);
     try {
@@ -18,9 +19,11 @@ const AuthProvider = ({ children }) => {
       const decode = jwtDecode(token);
       setUser({ ...decode, token });
       setLoading(false);
-      return { ok: true };
+      // console.log("decoded data", decode);
+      return { ok: true, role: decode.role };
     } catch (error) {
       setLoading(false);
+      console.error("Login error", error);
       return {
         ok: false,
         error: error.response?.data?.message || error.message,
@@ -32,6 +35,7 @@ const AuthProvider = ({ children }) => {
     localStorage.removeItem("token");
     setUser(null);
   };
+
   const register = async (data) => {
     setLoading(true);
     try {

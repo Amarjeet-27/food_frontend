@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import useAuth from "../context/UseAuth";
-    
 
 const Navbar = () => {
   const { user, logout } = useAuth();
@@ -10,6 +9,7 @@ const Navbar = () => {
         <Link to="/" className="font-semibold text-lg">
           FoodDelivery
         </Link>
+        {console.log(user)}
         {user ? (
           <>
             {user.role === "SHOP" ? (
@@ -35,6 +35,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

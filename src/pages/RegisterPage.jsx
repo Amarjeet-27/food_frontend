@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import useAuth from "../context/UseAuth";
+import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
   const [form, setForm] = useState({
