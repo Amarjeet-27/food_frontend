@@ -14,6 +14,7 @@ import {
 } from "./pages/AllPages.jsx";
 import useAuth from "./context/UseAuth.jsx";
 import PrivateRoute from "./components/PrivateRoute.jsx";
+import CustomerInfo from "./pages/CustomerInfo.jsx";
 const App = () => {
   const { user } = useAuth();
 
@@ -48,6 +49,7 @@ const App = () => {
               <Route path="/customer" element={<CustomerDashboard />} />
               <Route path="/customer/items" element={<ItemsPage />} />
               <Route path="/customer/orders" element={<OrdersPage />} />
+              <Route path="/customer/dashboard" element={<CustomerInfo />} />
             </Route>
 
             <Route path="*" element={<NotFound />} />

@@ -15,9 +15,12 @@ const Navbar = () => {
             {user.role === "SHOP" ? (
               <Link to="/api/items">Shop</Link>
             ) : (
-              <Link to="/api/customer">Customer</Link>
+              <Link to="/customer/dashboard">Customer</Link>
             )}
-            <button onClick={logout} className="px-3 py-1 border rounded">
+            <button
+              onClick={logout}
+              className="px-3 py-1 border rounded cursor-pointer"
+            >
               Logout
             </button>
           </>
@@ -26,7 +29,7 @@ const Navbar = () => {
             <Link to="/login">Login</Link>
             <Link
               to="/register"
-              className="px-3 py-1 bg-blue-600 text-white rounded"
+              className="px-3 py-1 bg-blue-600 text-white rounded cursor-pointer"
             >
               Register
             </Link>
