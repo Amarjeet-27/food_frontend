@@ -6,6 +6,8 @@ import ItemsPage from "./ItemsPage";
 import OrdersPage from "./OrderPage";
 import ItemForm from "./ItemForm";
 import NotFound from "./NotFound";
+import ShopItemsPage from "./ShopItemsPage";
+import Categories from "./Categories";
 export {
   LoginPage,
   RegisterPage,
@@ -15,4 +17,6 @@ export {
   OrdersPage,
   ItemForm,
   NotFound,
+  ShopItemsPage,
+  Categories,
 };

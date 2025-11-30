@@ -13,7 +13,7 @@ const ItemsPage = () => {
   useEffect(() => {
     async function fetchItems() {
       try {
-        const res = await api.get("/items");
+        const res = await api.get("/items/customer");
         setItems(res.data);
       } catch (err) {
         console.error(err);
@@ -89,7 +89,7 @@ const ItemsPage = () => {
     <div>
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-semibold">Items</h2>
-        {user?.role === "SHOP" && (
+        {user?.role === "SHOP_OWNER" && (
           <Link
             to="/shop/items/new"
             className="px-3 py-1 bg-blue-600 text-white rounded"
